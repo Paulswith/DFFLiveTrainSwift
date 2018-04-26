@@ -8,10 +8,11 @@
 
 import UIKit
 
-class DLMainLiveController: UINavigationController {
+class DLMainLiveController: DLSearchViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.randomColor
     }
 }
+

@@ -14,6 +14,8 @@
 		C796DA3D2091AD850002DD2A /* DLMainFishBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA3C2091AD850002DD2A /* DLMainFishBarViewController.swift */; };
 		C796DA3F2091AD920002DD2A /* DLMainDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA3E2091AD920002DD2A /* DLMainDiscoverViewController.swift */; };
 		C796DA412091CD130002DD2A /* Color_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA402091CD130002DD2A /* Color_Ext.swift */; };
+		C796DA432091DA340002DD2A /* DLSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA422091DA340002DD2A /* DLSearchViewController.swift */; };
+		C796DA452091E6780002DD2A /* UsageCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA442091E6780002DD2A /* UsageCommon.swift */; };
 		C799703820918E2E00BB4F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799703720918E2E00BB4F72 /* AppDelegate.swift */; };
 		C799703F20918E2E00BB4F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C799703E20918E2E00BB4F72 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		C796DA3C2091AD850002DD2A /* DLMainFishBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLMainFishBarViewController.swift; sourceTree = "<group>"; };
 		C796DA3E2091AD920002DD2A /* DLMainDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLMainDiscoverViewController.swift; sourceTree = "<group>"; };
 		C796DA402091CD130002DD2A /* Color_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_Ext.swift; sourceTree = "<group>"; };
+		C796DA422091DA340002DD2A /* DLSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLSearchViewController.swift; sourceTree = "<group>"; };
+		C796DA442091E6780002DD2A /* UsageCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageCommon.swift; sourceTree = "<group>"; };
 		C799703420918E2E00BB4F72 /* DouyuLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouyuLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C799703720918E2E00BB4F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C799703E20918E2E00BB4F72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		C799705C20918F2D00BB4F72 /* MainLive */ = {
 			isa = PBXGroup;
 			children = (
+				C796DA422091DA340002DD2A /* DLSearchViewController.swift */,
 				C796DA362091AAAC0002DD2A /* DLTabBarViewController.swift */,
 				C799705D20918F2D00BB4F72 /* Controller */,
 				C799705E20918F2D00BB4F72 /* Model */,
@@ -232,6 +237,7 @@
 		C799706020918F2D00BB4F72 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C796DA442091E6780002DD2A /* UsageCommon.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -342,6 +348,8 @@
 				C796DA412091CD130002DD2A /* Color_Ext.swift in Sources */,
 				C796DA3D2091AD850002DD2A /* DLMainFishBarViewController.swift in Sources */,
 				C796DA352091A5180002DD2A /* DLMainLiveController.swift in Sources */,
+				C796DA452091E6780002DD2A /* UsageCommon.swift in Sources */,
+				C796DA432091DA340002DD2A /* DLSearchViewController.swift in Sources */,
 				C796DA392091AD600002DD2A /* DLMainVIdeoViewController.swift in Sources */,
 				C796DA372091AAAC0002DD2A /* DLTabBarViewController.swift in Sources */,
 				C796DA3F2091AD920002DD2A /* DLMainDiscoverViewController.swift in Sources */,

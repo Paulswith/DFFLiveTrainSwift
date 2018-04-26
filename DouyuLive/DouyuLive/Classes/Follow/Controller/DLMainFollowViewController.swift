@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DLMainFollowViewController: UIViewController {
+class DLMainFollowViewController: DLSearchViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

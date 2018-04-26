@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DLMainFishBarViewController: UIViewController {
+class DLMainFishBarViewController: DLSearchViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

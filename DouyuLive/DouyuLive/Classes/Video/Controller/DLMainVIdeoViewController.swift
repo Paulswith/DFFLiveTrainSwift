@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DLMainVIdeoViewController: UIViewController {
+class DLMainVIdeoViewController: DLSearchViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

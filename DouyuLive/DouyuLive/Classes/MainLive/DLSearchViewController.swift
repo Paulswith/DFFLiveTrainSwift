@@ -18,13 +18,14 @@ class DLSearchViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNewNavigationBar()
+        timerChangeSearchContent(defaultSearchContent)
     }
 }
 
 
 extension DLSearchViewController {
     func setUpNewNavigationBar() {
-        let defiCommonColor = UIColor.defiColor(238,120,59)
+        let defiCommonColor = UIColor.navigColor
         let kNavigH = navigationBar.bounds.height + 20 // +20是为了状态栏也同色
         // Step~1: 设置导航栏的底层View
         baseNavigationView = UIView.init(frame:CGRect.init(x: 0, y: 0,
@@ -107,16 +108,36 @@ extension DLSearchViewController {
         searchBarLabel = UILabel.init(frame: CGRect.init(x: kSearchContentX, y: kSearchContentY,
                                                           width: kSearchContentW, height: kSearchContentH))
         searchBarLabel?.center.y = (navigSearchView?.frame.height)! / 2 // 居中
+        searchBarLabel?.font = UIFont.systemFont(ofSize: 12)
+        searchBarLabel?.textColor = UIColor.defiColor(248, 216, 195)
+        if defaultSearchContent.count > 0 {
+            searchBarLabel?.text = defaultSearchContent[0]
+        }
         navigSearchView?.addSubview(searchBarLabel!)
+        
+        
     }
     
-    //FIXME: ***********把定时展示搜索内容作了***********
-
-//    func timerChangeSearchContent(_ contentArray:[String]) {
-//        let maxCount = contentArray.count
-//
-//
-//
-//    }
+    // Step~4: 启动搜索框默认文本的定时器
+    func timerChangeSearchContent(_ contentArray:[String]) {
+        let maxCount = contentArray.count
+        var indexer = 1
+        guard maxCount > 1 else {
+            return
+        }
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true, block: { (_) in
+            UIView.animate(withDuration: 0.5, animations: {                 // 默认在主线程的
+                self.searchBarLabel?.text = defaultSearchContent[indexer]
+            }, completion: { (_) in
+                // 每次动画完加一, 如果加完等于了总数量, 从头开始
+                indexer += 1
+                guard indexer < maxCount else {
+                    indexer = 0
+                    return
+                }
+            })
+        })
+    }
+    
     
 }

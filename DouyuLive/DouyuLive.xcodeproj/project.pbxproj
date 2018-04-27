@@ -16,6 +16,8 @@
 		C796DA412091CD130002DD2A /* Color_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA402091CD130002DD2A /* Color_Ext.swift */; };
 		C796DA432091DA340002DD2A /* DLSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA422091DA340002DD2A /* DLSearchViewController.swift */; };
 		C796DA452091E6780002DD2A /* UsageCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA442091E6780002DD2A /* UsageCommon.swift */; };
+		C796DA472092BAF50002DD2A /* DLTitleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA462092BAF50002DD2A /* DLTitleScrollView.swift */; };
+		C796DA492092BC0E0002DD2A /* String_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796DA482092BC0E0002DD2A /* String_Ext.swift */; };
 		C799703820918E2E00BB4F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799703720918E2E00BB4F72 /* AppDelegate.swift */; };
 		C799703F20918E2E00BB4F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C799703E20918E2E00BB4F72 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		C796DA402091CD130002DD2A /* Color_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_Ext.swift; sourceTree = "<group>"; };
 		C796DA422091DA340002DD2A /* DLSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLSearchViewController.swift; sourceTree = "<group>"; };
 		C796DA442091E6780002DD2A /* UsageCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageCommon.swift; sourceTree = "<group>"; };
+		C796DA462092BAF50002DD2A /* DLTitleScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLTitleScrollView.swift; sourceTree = "<group>"; };
+		C796DA482092BC0E0002DD2A /* String_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Ext.swift; sourceTree = "<group>"; };
 		C799703420918E2E00BB4F72 /* DouyuLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouyuLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C799703720918E2E00BB4F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C799703E20918E2E00BB4F72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		C799704E20918F2D00BB4F72 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				C796DA482092BC0E0002DD2A /* String_Ext.swift */,
 				C796DA402091CD130002DD2A /* Color_Ext.swift */,
 			);
 			path = Extention;
@@ -230,6 +235,7 @@
 		C799705F20918F2D00BB4F72 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C796DA462092BAF50002DD2A /* DLTitleScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C796DA3B2091AD750002DD2A /* DLMainFollowViewController.swift in Sources */,
+				C796DA472092BAF50002DD2A /* DLTitleScrollView.swift in Sources */,
 				C796DA412091CD130002DD2A /* Color_Ext.swift in Sources */,
 				C796DA3D2091AD850002DD2A /* DLMainFishBarViewController.swift in Sources */,
 				C796DA352091A5180002DD2A /* DLMainLiveController.swift in Sources */,
@@ -353,6 +360,7 @@
 				C796DA392091AD600002DD2A /* DLMainVIdeoViewController.swift in Sources */,
 				C796DA372091AAAC0002DD2A /* DLTabBarViewController.swift in Sources */,
 				C796DA3F2091AD920002DD2A /* DLMainDiscoverViewController.swift in Sources */,
+				C796DA492092BC0E0002DD2A /* String_Ext.swift in Sources */,
 				C799703820918E2E00BB4F72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,8 +487,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A4C37KA7MA;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MDBWD7ZCM7;
 				INFOPLIST_FILE = DouyuLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -489,6 +497,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.paulswith.DouyuLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "03b1185f-1c61-4b95-94d2-a5817bb373f2";
+				PROVISIONING_PROFILE_SPECIFIER = QzoneDevWildCard;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -499,8 +509,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A4C37KA7MA;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MDBWD7ZCM7;
 				INFOPLIST_FILE = DouyuLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,6 +519,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.paulswith.DouyuLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "03b1185f-1c61-4b95-94d2-a5817bb373f2";
+				PROVISIONING_PROFILE_SPECIFIER = QzoneDevWildCard;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

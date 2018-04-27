@@ -18,7 +18,14 @@ extension UIColor {
         }
     }
     
+    public class var navigColor:UIColor {
+        get {
+            return UIColor.defiColor(238,120,59)
+        }
+    }
+    
     public class func defiColor(_ R:CGFloat, _ G:CGFloat, _ B:CGFloat, alpha:CGFloat=1.0) -> UIColor {
         return UIColor.init(red: R/255.0, green: G/255.0, blue: B/255.0, alpha: alpha)
     }
+    
 }

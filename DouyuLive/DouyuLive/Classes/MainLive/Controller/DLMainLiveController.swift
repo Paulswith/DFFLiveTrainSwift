@@ -8,10 +8,8 @@
 
 import UIKit
 
-let kindEach = ["天天打老虎", "天天", "天天打", "天天打老", "天天打A", "天天打AA",
-                "天天打老虎", "天天", "天天打"]
-let kTitleScrollViewSpace = 5 // 间距
-let kTitleScrollViewH = 30
+let kindEach = ["天天打老虎", "天搜索天", "天天打", "天天打搜索老", "天天打A", "天天打AA",
+                "天天打老虎", "天天", "天天打","天天搜索打A","天搜索天打A","天天打搜索A"]
 
 
 class DLMainLiveController: DLSearchViewController {
@@ -21,7 +19,11 @@ class DLMainLiveController: DLSearchViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.randomColor
-        setupTitleScrollView()
+        automaticallyAdjustsScrollViewInsets = false
+//        setupTitleScrollView()
+        let titleView = DLTitlelView.init(frame: CGRect.init(x: 0, y: 64, width: view.frame.width, height: kTitleScrollViewH), titles: kindEach)
+        titleView.backgroundColor = UIColor.randomColor
+        view.addSubview(titleView)
     }
     
 }
@@ -29,7 +31,7 @@ class DLMainLiveController: DLSearchViewController {
 
 
 extension DLMainLiveController {
-    
+    /*
     func setupTitleScrollView() {
         var titleViewLong = CGFloat(0)
         // 0. 添加左右空格. 计算总长度
@@ -66,4 +68,5 @@ extension DLMainLiveController {
             kTitleX += eachTitleW
         }
     }
+ */
 }

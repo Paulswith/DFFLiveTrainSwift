@@ -1,4 +1,4 @@
-//
+ //
 //  String_Ext.swift
 //  DouyuLive
 //
@@ -11,9 +11,10 @@ import UIKit
 
 
 extension String {
-    public func contentSize() -> CGSize{
-        let reSize:CGRect = self.boundingRect(with: CGSize.init(width: 320, height: 990), options: NSStringDrawingOptions.usesFontLeading,
-                                     attributes: nil, context: nil)
+    public func contentSize(withFont font:UIFont) -> CGSize{
+        let reSize:CGRect = self.boundingRect(with: CGSize.init(width: 320, height: 990), options: .usesLineFragmentOrigin,
+                                              attributes: [kCTFontAttributeName as NSAttributedStringKey: font], context: nil)
+        
         print(reSize)
         return reSize.size
     }

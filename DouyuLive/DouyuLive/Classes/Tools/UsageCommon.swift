@@ -11,5 +11,7 @@ import UIKit
 
 let kScreenW = UIScreen.main.bounds.width
 let kScreenH = UIScreen.main.bounds.height
+let kScreenHalfW = UIScreen.main.bounds.width/2
+let kScreenTwoThirdW = UIScreen.main.bounds.width/3*2
 
 

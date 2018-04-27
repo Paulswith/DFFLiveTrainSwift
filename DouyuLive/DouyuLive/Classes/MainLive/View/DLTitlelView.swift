@@ -8,7 +8,8 @@
 
 import UIKit
 
-let kTitleScrollViewH = CGFloat(30)
+let kTitleScrollViewH = CGFloat(35) // titleView的高度
+
 class DLTitlelView: UIView {
     // scrollview
     private lazy var _scrollView:UIScrollView = {
@@ -22,6 +23,7 @@ class DLTitlelView: UIView {
     private var touchBtnMark:UIButton?
     private var titleButtonArray = [UIButton]()
     private var titles:[String]
+    private var contentViewWidth:CGFloat = 0
     init(frame: CGRect, titles:[String]) {
         self.titles = titles
         super.init(frame: frame)
@@ -39,7 +41,7 @@ class DLTitlelView: UIView {
         
         //FIXME: ***********字体在选中状态需要改变***********
         // 设置子按钮
-        var kTitleX = CGFloat(0)
+//        var kTitleX = CGFloat(0)
         for (tag, var btnName) in self.titles.enumerated() {
             let btn = UIButton.init(type: .custom)
             btn.setTitle(btnName, for: .normal)
@@ -51,12 +53,12 @@ class DLTitlelView: UIView {
             btn.tag = tag
             // 获取长度ß
             let eachTitleW = CGFloat(btnName.contentSize(withFont:font).width)
-            btn.frame = CGRect.init(x: kTitleX, y: CGFloat(0), width: eachTitleW, height: kTitleScrollViewH)
+            btn.frame = CGRect.init(x: contentViewWidth, y: CGFloat(0), width: eachTitleW, height: kTitleScrollViewH)
             _scrollView.addSubview(btn)
-            kTitleX += eachTitleW
+            contentViewWidth += eachTitleW
             self.titleButtonArray.append(btn)
         }
-        _scrollView.contentSize = CGSize.init(width: kTitleX, height: kTitleScrollViewH)
+        _scrollView.contentSize = CGSize.init(width: contentViewWidth, height: kTitleScrollViewH)
         guard self.titleButtonArray.count == 0 else {
             self.tap(self.titleButtonArray[0])
             return
@@ -72,5 +74,20 @@ class DLTitlelView: UIView {
         button.titleLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: .heavy)
         self.touchBtnMark = button
         
+        // 根据按钮点击的位置,展示移动动画 算法代码如下
+        let calX = button.frame.maxX
+        switch  calX{
+            // 把大概率放前面, 减少计算
+        case kScreenTwoThirdW ..< (contentViewWidth-kScreenHalfW):  //  [2/3屏,总长 - 1/2屏),移动到中间
+            let offset = CGPoint.init(x: (button.frame.origin.x - kScreenHalfW), y: 0)
+            _scrollView.setContentOffset(offset, animated: true)
+        case 0 ..< kScreenTwoThirdW:                                // [0, 2/3屏), 挪到头
+            _scrollView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
+        case (contentViewWidth-kScreenHalfW) ... contentViewWidth: // [总长 - 1/2屏, 总长],挪到尾
+            let offset = CGPoint.init(x: (contentViewWidth - kScreenW), y: 0)
+            _scrollView.setContentOffset(offset, animated: true)
+        default:
+            print("NoneThing")
+        }
     }
 }
